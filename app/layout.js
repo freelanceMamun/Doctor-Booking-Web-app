@@ -3,6 +3,8 @@ import './globals.css';
 
 // =========  components to header and footer imported
 import HeaderCompo from './_components/Header';
+import Footer from './_components/Footer';
+
 const SpaceGrotesk = Space_Grotesk({ subsets: ['latin'] });
 
 export const metadata = {
@@ -15,11 +17,14 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className={SpaceGrotesk.className}>
         <header>
-          <div className="md:px-20 lg:px-40">
+          <div className="md:px-8 lg:px-20 xl:px-60">
             <HeaderCompo></HeaderCompo>
           </div>
         </header>
+
         {children}
+        {/* ======= Footer */}
+        <Footer></Footer>
       </body>
     </html>
   );

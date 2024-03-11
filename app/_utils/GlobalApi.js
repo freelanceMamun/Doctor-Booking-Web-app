@@ -8,8 +8,10 @@ let axioxClient = axios.create({
   },
 });
 
-const getCatagories = () => axioxClient.get('/sliders?populate=*');
-const getDoctors = () => axioxClient.get('/doctors?populate=*');
+let getCatagories = () => axioxClient.get('/sliders?populate=*');
+
+let getDoctors = () => axioxClient.get('/doctors?populate=*');
+
 export default {
   getCatagories,
   getDoctors,

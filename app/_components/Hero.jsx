@@ -4,13 +4,13 @@ const Hero = () => {
   return (
     <div>
       <section>
-        <div className="lg:px-60 md:px-20 lg:py-20  sm:px-6 sm:py-12  py-10 px-10">
+        <div className="lg:px-30 xl:px-60 md:px-8 lg:py-20  sm:px-2 sm:py-12  py-4 px-4">
           <div className="grid grid-cols-1 gap-8 lg:grid-cols-2 lg:gap-16">
-            <div className="relative  overflow-hidden rounded-3xl lg:order-last ">
+            <div className="relative overflow-hidden rounded-3xl lg:order-last order-1">
               <img
                 src="https://st2.depositphotos.com/1518767/7621/i/450/depositphotos_76211603-stock-photo-team-of-smiling-doctors.jpg"
                 alt=""
-                className="absolute inset-0 h-full w-full object-cover"
+                className=" inset-0 h-full w-full object-cover"
               />
             </div>
 

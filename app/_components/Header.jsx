@@ -43,7 +43,7 @@ const Header = () => {
           width={80}
           height={80}
         ></Image>
-        <ul className="md:flex items-center gap-8 hidden">
+        <ul className="lg:flex items-center gap-8 hidden">
           {Menu.map((item, index) => {
             return (
               <li

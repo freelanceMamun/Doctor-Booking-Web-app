@@ -11,9 +11,9 @@ const CategorieSearch = () => {
   // Catagories Initial data  Store
   const [categoriesList, setCategorList] = useState([1, 2, 4, 6, 8, 4, 8, 20]);
 
-  // useEffect(() => {
-  //   getCategoriesList();
-  // }, []);
+  useEffect(() => {
+    getCategoriesList();
+  }, []);
 
   const getCategoriesList = () => {
     GlobalApi.getCatagories().then((response) => {
@@ -23,7 +23,7 @@ const CategorieSearch = () => {
   };
 
   return (
-    <div className="lg:px-60">
+    <div className="xl:px-60 lg:px-20 md:px-8 px-2">
       <div className=" flex flex-col gap-5">
         <h1 className="text-3xl lg:text-5xl font-bold tracking-wider text-center">
           Category <span className=" text-purple-600">Search</span>{' '}
@@ -47,14 +47,17 @@ const CategorieSearch = () => {
 
       {/* Display Categories List */}
 
-      <div className=" mt-14 mb-14 grid grid-cols-3 gap-3  md:grid-cols-4 lg:grid-cols-6">
+      <div
+        className="
+       mt-14 mb-14 grid grid-cols-3 gap-3  md:grid-cols-4 lg:grid-cols-6"
+      >
         {categoriesList.map((item, index) => {
           return (
             <div
               className=" flex flex-col items-center text-center gap-2 p-10 border bg-blue-50 m-2 rounded-lg hover:scale-105 hover:shadow-sm transition-all ease-out"
               key={index}
             >
-              <Image src={''} alt="icon"></Image>
+              {/* <Image src={''} alt="icon"></Image> */}
               <label className=" text-2xl font-semibold text-blue-600">
                 Dentist
               </label>
