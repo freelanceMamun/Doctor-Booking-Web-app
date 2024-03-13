@@ -18,7 +18,7 @@ export default function Home() {
     GlobalApi.getDoctors()
       .then((response) => {
         setdoctorList(response.data.data);
-        console.log(response.data.data);
+
         return response;
       })
       .catch((error) => {

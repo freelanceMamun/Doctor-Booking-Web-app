@@ -6,14 +6,15 @@ import { Button } from '@/components/ui/button';
 import { Search } from 'lucide-react';
 import GlobalApi from '../_utils/GlobalApi';
 import Image from 'next/image';
+import Link from 'next/link';
 
 const CategorieSearch = () => {
   // Catagories Initial data  Store
   const [categoriesList, setCategorList] = useState([1, 2, 4, 6, 8, 4, 8, 20]);
 
-  useEffect(() => {
-    getCategoriesList();
-  }, []);
+  // useEffect(() => {
+  //   getCategoriesList();
+  // }, []);
 
   const getCategoriesList = () => {
     GlobalApi.getCatagories().then((response) => {
@@ -53,7 +54,8 @@ const CategorieSearch = () => {
       >
         {categoriesList.map((item, index) => {
           return (
-            <div
+            <Link
+              href={'/search/' + index}
               className=" flex flex-col items-center text-center gap-2 p-10 border bg-blue-50 m-2 rounded-lg hover:scale-105 hover:shadow-sm transition-all ease-out"
               key={index}
             >
@@ -61,7 +63,7 @@ const CategorieSearch = () => {
               <label className=" text-2xl font-semibold text-blue-600">
                 Dentist
               </label>
-            </div>
+            </Link>
           );
         })}
       </div>
